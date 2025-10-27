@@ -3,9 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Top of Mind Labs</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #EAEAEA;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .header .tagline {
+            font-size: 1.2rem;
+            color: #A0A0A0;
+        }
+        .section {
+            padding: 60px 0;
+            border-top: 1px solid #333;
+        }
+        .section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .service-card {
+            background-color: #1E1E1E;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #4D96FF; /* Accent color */
+        }
+        .team-section {
+            text-align: center;
+        }
+        .team-section p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            color: #A0A0A0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <div class="header">
+        <div class="container">
+            <h1>Top of Mind Labs</h1>
+            <p class="tagline">AI-Powered Consulting for Private Equity</p>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
+                Top of Mind Labs is a premier consulting firm specializing in accelerating AI adoption for private equity firms and their portfolio companies. We identify and build high-impact AI use cases and prototypes, turning data into a strategic asset.
+            </p>
+        </div>
+    </div>
+
+    <div class="section" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>AI Use Case & Prototype Development</h3>
+                    <p>We rapidly design, build, and validate AI-powered prototypes to demonstrate value and de-risk investment for your most critical business challenges.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Data Science & Analytics</h3>
+                    <p>Unlock insights from your data with our expert data scientists who specialize in machine learning, statistical modeling, and predictive analytics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Staff Augmentation</h3>
+                    <p>Scale your team with our elite talent pool, including Data Scientists, Data Engineers, DevOps/SRE specialists, and full-stack developers (frontend & backend).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section team-section" id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p>
+                Our team is composed of seasoned professionals with proven track records from top technology firms like Google, Amazon, and Microsoft. We bring a culture of excellence and a history of delivering high-quality, scalable software solutions to every engagement.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2025 Top of Mind Labs. All Rights Reserved.</p>
+        </div>
+    </div>
+
 </body>
 </html>
