@@ -3,128 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top of Mind Labs</title>
+    <title>Top of Mind Labs - AI-Native Consulting</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #EAEAEA;
+            background-color: #0A0A0A;
+            color: #E0E0E0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
         .container {
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
+
         .header {
-            padding: 40px 0;
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: #00F5A0; /* Vibrant Accent */
+        }
+
+        .nav a {
+            color: #E0E0E0;
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #00F5A0;
+        }
+
+        .hero {
+            padding: 120px 0;
             text-align: center;
+            animation: fadeIn 1s ease-out 0.2s;
+            animation-fill-mode: both;
         }
-        .header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0 0 16px 0;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            background: -webkit-linear-gradient(45deg, #FFFFFF, #E0E0E0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .header .tagline {
-            font-size: 1.2rem;
+
+        .hero p {
+            font-size: 1.25rem;
             color: #A0A0A0;
+            max-width: 700px;
+            margin: 0 auto 32px auto;
         }
+
+        .cta-button {
+            background-color: #00F5A0;
+            color: #0A0A0A;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 245, 160, 0.2);
+        }
+
         .section {
-            padding: 60px 0;
-            border-top: 1px solid #333;
+            padding: 100px 0;
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: both;
         }
-        .section h2 {
-            font-size: 2rem;
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
         }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
         }
+
         .service-card {
-            background-color: #1E1E1E;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #333;
+            background-color: #141414;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00F5A0;
+        }
+
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             margin-top: 0;
-            color: #4D96FF; /* Accent color */
+            margin-bottom: 16px;
+            color: #FFFFFF;
         }
+        
+        .service-card p {
+            color: #A0A0A0;
+            line-height: 1.6;
+        }
+
         .team-section {
             text-align: center;
         }
+
         .team-section p {
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #B0B0B0;
         }
+        
+        .team-section .highlight {
+            color: #00F5A0;
+            font-weight: 600;
+        }
+
         .footer {
             text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #333;
-            color: #A0A0A0;
+            padding: 50px 0;
+            border-top: 1px solid #222;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
+    <header class="header">
         <div class="container">
-            <h1>Top of Mind Labs</h1>
-            <p class="tagline">AI-Powered Consulting for Private Equity</p>
+            <div class="logo">Top of Mind<span>Labs</span></div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="section" id="about">
-        <div class="container">
-            <h2>Who We Are</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
-                Top of Mind Labs is a premier consulting firm specializing in accelerating AI adoption for private equity firms and their portfolio companies. We identify and build high-impact AI use cases and prototypes, turning data into a strategic asset.
-            </p>
-        </div>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Transforming Private Equity with AI-Native Solutions</h1>
+                <p>We partner with leading private equity firms to design, build, and scale high-impact AI prototypes and unlock strategic value across their portfolios.</p>
+                <a href="#" class="cta-button">Schedule a Consultation</a>
+            </div>
+        </section>
 
-    <div class="section" id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>AI Use Case & Prototype Development</h3>
-                    <p>We rapidly design, build, and validate AI-powered prototypes to demonstrate value and de-risk investment for your most critical business challenges.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Data Science & Analytics</h3>
-                    <p>Unlock insights from your data with our expert data scientists who specialize in machine learning, statistical modeling, and predictive analytics.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Staff Augmentation</h3>
-                    <p>Scale your team with our elite talent pool, including Data Scientists, Data Engineers, DevOps/SRE specialists, and full-stack developers (frontend & backend).</p>
+        <section id="about" class="section">
+            <div class="container">
+                 <h2 class="section-title">Your Strategic AI Partner</h2>
+                 <p style="text-align: center; max-width: 800px; margin: -40px auto 0 auto; font-size: 1.2rem; line-height: 1.7; color: #B0B0B0;">
+                    Top of Mind Labs is not just a consultancy; we are your embedded technology partner. We bridge the gap between groundbreaking AI and tangible business outcomes, providing the technical horsepower and strategic insight needed to thrive in the age of artificial intelligence.
+                </p>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Core Capabilities</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>AI Strategy & Prototyping</h3>
+                        <p>From ideation to a fully functional proof-of-concept, we identify the most valuable AI use cases and deliver working prototypes in weeks, not months, demonstrating clear ROI.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Expert-Led Staff Augmentation</h3>
+                        <p>Embed our elite, ex-FAANG talent directly into your teams. We provide world-class expertise in Data Science, Data Engineering, DevOps/SRE, and Full-Stack Development.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Due Diligence & Technical Advisory</h3>
+                        <p>Leverage our deep technical expertise during the due diligence process to assess the technological maturity, scalability, and AI potential of target acquisitions.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="section team-section" id="team">
-        <div class="container">
-            <h2>Our Team</h2>
-            <p>
-                Our team is composed of seasoned professionals with proven track records from top technology firms like Google, Amazon, and Microsoft. We bring a culture of excellence and a history of delivering high-quality, scalable software solutions to every engagement.
-            </p>
-        </div>
-    </div>
+        <section id="team" class="section team-section">
+            <div class="container">
+                <h2 class="section-title">Built by the Best</h2>
+                <p>
+                    Our strength lies in our people. The Top of Mind Labs team consists of <span class="highlight">industry veterans and distinguished engineers</span> from the world's most respected technology companies. We bring a battle-tested, product-centric mindset to every engagement, ensuring solutions are not only technically brilliant but also commercially viable.
+                </p>
+            </div>
+        </section>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Top of Mind Labs. All Rights Reserved.</p>
+            <p>&copy; 2025 Top of Mind Labs. Engineering the Future of Value Creation.</p>
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
