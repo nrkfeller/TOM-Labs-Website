@@ -14,10 +14,25 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0A0A0A;
-            color: #E0E0E0;
+            background-color: #0d1b2a; /* Navy Blue */
+            color: #E0E1DD; /* Off-white */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            background-image: url('background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(13, 27, 42, 0.7); /* Navy Blue Overlay */
+            z-index: -1;
         }
 
         .container {
@@ -41,11 +56,11 @@
         }
         
         .logo span {
-            color: #00F5A0; /* Vibrant Accent */
+            color: #9B2226; /* Wine Red */
         }
 
         .nav a {
-            color: #E0E0E0;
+            color: #E0E1DD;
             text-decoration: none;
             margin-left: 24px;
             font-weight: 500;
@@ -53,7 +68,7 @@
         }
 
         .nav a:hover {
-            color: #00F5A0;
+            color: #9B2226; /* Wine Red */
         }
 
         .hero {
@@ -69,21 +84,19 @@
             margin: 0 0 16px 0;
             line-height: 1.1;
             letter-spacing: -2px;
-            background: -webkit-linear-gradient(45deg, #FFFFFF, #E0E0E0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #FFFFFF;
         }
 
         .hero p {
             font-size: 1.25rem;
-            color: #A0A0A0;
+            color: #A9A9A9; /* Lighter Gray */
             max-width: 700px;
             margin: 0 auto 32px auto;
         }
 
         .cta-button {
-            background-color: #00F5A0;
-            color: #0A0A0A;
+            background-color: #9B2226; /* Wine Red */
+            color: #E0E1DD;
             font-size: 1rem;
             font-weight: bold;
             padding: 16px 32px;
@@ -95,7 +108,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 245, 160, 0.2);
+            box-shadow: 0 10px 20px rgba(155, 34, 38, 0.2);
         }
 
         .section {
@@ -119,16 +132,16 @@
         }
 
         .service-card {
-            background-color: #141414;
+            background-color: #1b263b; /* Lighter Navy */
             padding: 40px;
             border-radius: 12px;
-            border: 1px solid #222;
+            border: 1px solid #333;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: #00F5A0;
+            border-color: #9B2226; /* Wine Red */
         }
 
         .service-card h3 {
@@ -139,7 +152,7 @@
         }
         
         .service-card p {
-            color: #A0A0A0;
+            color: #A9A9A9; /* Lighter Gray */
             line-height: 1.6;
         }
 
@@ -152,18 +165,67 @@
             margin: 0 auto;
             font-size: 1.2rem;
             line-height: 1.7;
-            color: #B0B0B0;
+            color: #E0E1DD;
         }
         
         .team-section .highlight {
-            color: #00F5A0;
+            color: #9B2226; /* Wine Red */
             font-weight: 600;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #C0C0C0;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #1b263b; /* Lighter Navy */
+            color: #E0E1DD;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #9B2226; /* Wine Red */
+            color: #E0E1DD;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #AE2F33;
         }
 
         .footer {
             text-align: center;
             padding: 50px 0;
-            border-top: 1px solid #222;
+            border-top: 1px solid #333;
             color: #888;
         }
     </style>
@@ -177,6 +239,7 @@
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -186,7 +249,7 @@
             <div class="container">
                 <h1>Transforming Private Equity with AI-Native Solutions</h1>
                 <p>We partner with leading private equity firms to design, build, and scale high-impact AI prototypes and unlock strategic value across their portfolios.</p>
-                <a href="#" class="cta-button">Schedule a Consultation</a>
+                <a href="#contact" class="cta-button">Schedule a Consultation</a>
             </div>
         </section>
 
@@ -225,6 +288,27 @@
                 <p>
                     Our strength lies in our people. The Top of Mind Labs team consists of <span class="highlight">industry veterans and distinguished engineers</span> from the world's most respected technology companies. We bring a battle-tested, product-centric mindset to every engagement, ensuring solutions are not only technically brilliant but also commercially viable.
                 </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Let's Talk</h2>
+                <form class="contact-form" action="mailto:contact@topofmindlabs.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
